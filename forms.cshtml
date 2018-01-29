@@ -47,9 +47,24 @@
 			  if  (IsPost){
 			  int first = Convert.ToInt32(Request["first-value"]);
 			  int second = Convert.ToInt32(Request["second-value"]);
-			  int answer = Convert.ToInt32(first + second);
-			  <p>Answer: @answer</p>
+			  int answer = 0;
 			  }
+			  switch(operator)
+				{
+					case"add":
+						answer = Convert.ToInt32(first+second);
+					break;
+					case "subtract":
+						answer = Convert.ToInt32(first-second);
+					break;
+					case"multiply":
+						answer = Convert.ToInt32(first*second);
+					break;
+					case"divide":
+						answer = Convert.ToInt32(first/second);
+					break;
+				}
+				<p>Answer: @answer</p>
 			}
 	</form>
   </body>
