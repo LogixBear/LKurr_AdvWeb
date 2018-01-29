@@ -47,7 +47,18 @@
 			  if  (IsPost){
 			  int first = Convert.ToInt32(Request["first-value"]);
 			  int second = Convert.ToInt32(Request["second-value"]);
-			  int answer = Convert.ToInt32(first + second);
+				if(add.Checked){
+					int answer = Convert.ToInt32(first+second);
+				} else if
+				if(subtract.Checked){
+					int answer = Convert.ToInt32(first-second);
+				} else if
+				if(multiply.Checked){
+					int answer = Convert.ToInt32(first*second);
+				} else
+				if(divide.Checked){
+					int answer = Convert.ToInt32(first/second);
+				}
 			  <p>Answer: @answer</p>
 			  }
 			}
