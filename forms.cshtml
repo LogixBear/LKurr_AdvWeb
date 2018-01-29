@@ -43,29 +43,30 @@
 		<div class='calculate'>
 		  <button>Calculate!</button>
 		</div></br>
-			@{
-			  if  (IsPost){
+		@{
+		  if (IsPost){
 			  int first = Convert.ToInt32(Request["first-value"]);
 			  int second = Convert.ToInt32(Request["second-value"]);
 			  string operator = Request["operator"];
-					switch(operator)
-					{
-						case"add":
-						int answer = Convert.ToInt32(first+second);
-						break;
-						case "subtract"
-						int answer = Convert.ToInt32(first-second);
-						break;
-						case"multiply"
-						int answer = Convert.ToInt32(first*second);
-						break;
-						case"divide"
-						int answer = Convert.ToInt32(first/second);
-						break;
-					}
-					<p>Answer: @answer</p>
+			  int answer;
+				switch(operator)
+				{
+					case"add":
+						answer = Convert.ToInt32(first+second);
+					break;
+					case "subtract":
+						answer = Convert.ToInt32(first-second);
+					break;
+					case"multiply":
+						answer = Convert.ToInt32(first*second);
+					break;
+					case"divide":
+						answer = Convert.ToInt32(first/second);
+					break;
 				}
+				<p>Answer: @answer</p>
 			}
+		}
 	</form>
   </body>
 </html>
