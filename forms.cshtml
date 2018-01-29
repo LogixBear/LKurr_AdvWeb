@@ -8,9 +8,8 @@
   <body>
   @{
 	  if  (IsPost){
-	  int first = Request["first-value"];
-	  int second = Request["second-value"];
-	  int answer = (first + second);
+	  int first = Convert.ToInt32(Request["first-value"]);
+	  int second = Convert.ToInt32(Request["second-value"]);
 	  }
 	}
     <header class='speaker-form-header'>
