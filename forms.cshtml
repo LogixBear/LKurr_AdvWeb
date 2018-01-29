@@ -10,6 +10,7 @@
 	  if  (IsPost){
 	  int first = Convert.ToInt32(Request["first-value"]);
 	  int second = Convert.ToInt32(Request["second-value"]);
+	  int answer = Convert.ToInt32(first + second);
 	  }
 	}
     <header class='speaker-form-header'>
@@ -49,6 +50,9 @@
 		<div class='calculate'>
 		  <button>Calculate!</button>
 		</div></br>
+		<div class='answer'>
+			<p>Answer: @answer</p>
+		</div>
 	</form>
   </body>
 </html>
