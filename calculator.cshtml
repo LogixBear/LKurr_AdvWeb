@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<form action='' method='post' class='speaker-form'>
+		<form action='' method='post'>
 			<div>
 			  <label for='first-value'>First Value:</label>
 			  <input id='first-value' name='first-value' type='text'/>
@@ -38,20 +38,21 @@
 			  int second = Convert.ToInt32(Request["second-value"]);
 			  string operator = Request["operator"];
 			  int answer = 0; 
+			  
 				switch(operator)
 				{
 					case"add":
 						answer = Convert.ToInt32(first+second);
-					break;
+						break;
 					case "subtract":
 						answer = Convert.ToInt32(first-second);
-					break;
+						break;
 					case"multiply":
 						answer = Convert.ToInt32(first*second);
-					break;
+						break;
 					case"divide":
 						answer = Convert.ToInt32(first/second);
-					break;
+						break;
 				}
 				
 				<p>Answer: @answer</p>
