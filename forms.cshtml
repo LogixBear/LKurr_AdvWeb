@@ -47,14 +47,21 @@
 			  if  (IsPost){
 			  int first = Convert.ToInt32(Request["first-value"]);
 			  int second = Convert.ToInt32(Request["second-value"]);
-				if(add.Checked){
+			  string operator = Request["operator"];
+				switch(operator)
+				{
+					case"add":
 					int answer = Convert.ToInt32(first+second);
-				} else if(subtract.Checked){
+					break;
+					case "subtract"
 					int answer = Convert.ToInt32(first-second);
-				} else if(multiply.Checked){
+					break;
+					case"multiply"
 					int answer = Convert.ToInt32(first*second);
-				} else{
+					break;
+					case"divide"
 					int answer = Convert.ToInt32(first/second);
+					break;
 				}
 			  <p>Answer: @answer</p>
 			  }
