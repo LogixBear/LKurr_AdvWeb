@@ -4,10 +4,10 @@
 		<h1>Calculator</h1>
 		<form action='' method='post'>
 			<div>
-			  <label for='first-value'>First Value:</label>
-			  <input id='first-value' name='first-value' type='text'/>
-			  <label for='second-value'>Second Value:</label>
-			  <input id='second-value' name='second-value' type='text'/>
+			  <label for='first'>First Value:</label>
+			  <input id='first' name='first' type='text'/>
+			  <label for='second'>Second Value:</label>
+			  <input id='second' name='second-value' type='text'/>
 			</div>
 			<div class='operators'>
 			  <legend>Operator:</legend>
@@ -39,24 +39,24 @@
 		</form>
 		@{
 			if(IsPost){
-				int first-value = Convert.ToInt32(Request["first-value"]);
-				int second-value = Convert.ToInt32(Request["second-value"]);
+				int first = Convert.ToInt32(Request["first"]);
+				int second = Convert.ToInt32(Request["second"]);
 				string operation = Request["operator"];
 				int answer = 0;
 				
 				switch(operation)
 				{
 					case "add":
-						answer = first-value + second-value;
+						answer = first + second;
 						break;
 					case "subtract":
-						answer = first-value - second-value;
+						answer = first - second;
 						break;
 					case "multiply":
-						answer = first-value * second-value;
+						answer = first * second;
 						break;
 					case "divide":
-						answer = first-value / second-value;
+						answer = first / second;
 						break;
 				}
 				
